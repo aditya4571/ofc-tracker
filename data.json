@@ -1,1 +1,4854 @@
-{}
+{
+  "SSE/T/NLR": {
+    "JE/T/NLR": {
+      "TMC - KJJ": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-08",
+          "spareDate": "2025-12-16",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-08",
+          "spareDate": "2025-12-16",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-05",
+          "remarks": ""
+        }
+      },
+      "KJJ - PGU": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-15",
+          "spareDate": "2025-12-19",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-15",
+          "spareDate": "2025-12-19",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-06",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-05",
+          "remarks": ""
+        }
+      },
+      "PGU - NLR": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-06",
+          "spareDate": "2025-12-17",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-06",
+          "spareDate": "2025-12-23",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-05",
+          "remarks": ""
+        }
+      },
+      "NLR - VDE": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-18",
+          "spareDate": "2025-12-24",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-18",
+          "spareDate": "2025-12-26",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      }
+    },
+    "SSE/T/GDR": {
+      "VDE - HUT 6": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-18",
+          "spareDate": "2025-12-06",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      },
+      "HUT 6 - VKT": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-08",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-08",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "VKT - KMLP": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-04",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-06",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      },
+      "VKT - VR JN": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-12-06",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      },
+      "KMLP - MBL": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-10",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-16",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      },
+      "KMLP - VR JN": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-16",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      },
+      "MBL - GDR": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-29",
+          "spareDate": "2025-11-28",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-29",
+          "spareDate": "2025-11-28",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      }
+    }
+  },
+  "SSE/T/BTTR": {
+    "JE/T/BTTR": {
+      "TMC-AXR": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-30",
+          "spareDate": "2025-12-21",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-30",
+          "spareDate": "2025-12-21",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-30",
+          "spareDate": "2025-12-21",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      },
+      "AXR-BTTR": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-09",
+          "spareDate": "2025-12-01",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-09",
+          "spareDate": "2025-12-01",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-02-09",
+          "spareDate": "2026-12-01",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      },
+      "BTTR-SVPM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-09",
+          "spareDate": "2025-12-01",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-09",
+          "spareDate": "2025-12-01",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-02-09",
+          "spareDate": "2025-12-01",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      },
+      "SVPM-KVZ IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-10",
+          "spareDate": "2025-11-04",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-10",
+          "spareDate": "2025-11-04",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-10",
+          "spareDate": "2025-11-04",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      }
+    },
+    "JE/T/KVZ": {
+      "KVZ-SVPM IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-23",
+          "spareDate": "2025-11-06",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-23",
+          "spareDate": "2025-11-06",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-23",
+          "spareDate": "2025-11-06",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "KVZ-TTU IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-24",
+          "spareDate": "2025-11-06",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-24",
+          "spareDate": "2025-11-06",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-24",
+          "spareDate": "2025-11-06",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      },
+      "TTU-KVZ IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-12-04",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-12-04",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-12-04",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "UPD-TTU IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-10",
+          "spareDate": "2025-12-03",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-10",
+          "spareDate": "2025-12-03",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-02-10",
+          "spareDate": "2025-12-03",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      },
+      "TTU-UPD IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-12-03",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-12-03",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-12-03",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "UPD-SKM IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-12",
+          "spareDate": "2025-12-02",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-12",
+          "spareDate": "2025-12-02",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-02-12",
+          "spareDate": "2025-12-02",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-06",
+          "remarks": ""
+        }
+      },
+      "SKM-UPD IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-12",
+          "spareDate": "2025-12-02",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-12",
+          "spareDate": "2025-12-02",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-02-12",
+          "spareDate": "2025-12-02",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      }
+    }
+  },
+  "SSE/T/OGL": {
+    "JE/T/OGL": {
+      "SKM-TNR": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "TNR-SDM": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "SDM-OGL": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "OGL-KRV": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "KRV-ANB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-28",
+          "spareDate": "2025-10-14",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "SKM YARD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-22",
+          "spareDate": "2025-10-19",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-19",
+          "remarks": ""
+        }
+      },
+      "SKM-TNR IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-19",
+          "spareDate": "2025-11-23",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-19",
+          "spareDate": "2025-11-23",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-02-19",
+          "spareDate": "2025-11-23",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-19",
+          "remarks": "-"
+        }
+      },
+      "TNR-SKM IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-19",
+          "spareDate": "2025-11-23",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-19",
+          "spareDate": "2025-11-23",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-02-19",
+          "spareDate": "2025-11-23",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-19",
+          "remarks": "-"
+        }
+      },
+      "TNR YARD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-07",
+          "spareDate": "2025-12-03",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-19",
+          "remarks": "-"
+        }
+      },
+      "TNR-SDM IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-07",
+          "spareDate": "2025-12-03",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-07",
+          "spareDate": "2025-12-03",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-07",
+          "spareDate": "2025-12-03",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-19",
+          "remarks": "-"
+        }
+      },
+      "SDM-TNR IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-07",
+          "spareDate": "2025-12-20",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-07",
+          "spareDate": "2025-12-20",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-07",
+          "spareDate": "2025-12-20",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-19",
+          "remarks": "-"
+        }
+      },
+      "SDM YARD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-07",
+          "spareDate": "2025-12-20",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-19",
+          "remarks": "-"
+        }
+      },
+      "SDM-OGL IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-21",
+          "spareDate": "2025-11-29",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-21",
+          "spareDate": "2025-11-29",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-02-21",
+          "spareDate": "2025-11-29",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-19",
+          "remarks": "-"
+        }
+      },
+      "OGL-SDM IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-26",
+          "spareDate": "2025-11-29",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-26",
+          "spareDate": "2025-11-29",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-02-26",
+          "spareDate": "2025-11-29",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": "-"
+        }
+      },
+      "OGL YARD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-23",
+          "spareDate": "2025-11-26",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": "-"
+        }
+      },
+      "OGL-KRV IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-26",
+          "spareDate": "2026-10-14",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-26",
+          "spareDate": "2026-10-14",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-02-26",
+          "spareDate": "2026-10-14",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "KRV-OGL IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-26",
+          "spareDate": "2026-10-14",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-26",
+          "spareDate": "2026-10-14",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-02-26",
+          "spareDate": "2026-10-14",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "KRV YARD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-30",
+          "spareDate": "2025-12-05",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      }
+    },
+    "JE/T/CLX": {
+      "ANB-UGD": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "UGD-CJM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-04",
+          "spareDate": "2025-12-17",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "CJM-VTM": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "VTM-CLX": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "ANB YARD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-28",
+          "spareDate": "2025-11-28",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "ANB-UGD IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-11-28",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-11-28",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-11-28",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "UGD-ANB IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-10-21",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-10-21",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-10-21",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "UGD YARD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-28",
+          "spareDate": "2025-10-21",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "CJM YARD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-04",
+          "spareDate": "2025-12-17",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "CJM-VTM DN IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2025-09-13",
+          "spareDate": "2025-11-07",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-09-13",
+          "spareDate": "2025-11-07",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2025-09-13",
+          "spareDate": "2025-11-07",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "VTM-CJM UP IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2025-09-13",
+          "spareDate": "2025-11-07",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-09-13",
+          "spareDate": "2025-11-07",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2025-09-13",
+          "spareDate": "2025-11-07",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "VTM YARD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-09",
+          "spareDate": "2025-06-11",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "VTM-CLX IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-09",
+          "spareDate": "2025-06-11",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-09",
+          "spareDate": "2025-06-11",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-09",
+          "spareDate": "2025-06-11",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "CLX-VTM IB": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-30",
+          "spareDate": "2025-06-22",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-30",
+          "spareDate": "2025-06-22",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-30",
+          "spareDate": "2025-06-22",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "CLX YARD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-30",
+          "spareDate": "2025-11-28",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      }
+    }
+  },
+  "SSE/T/TEL": {
+    "JE/T/BPP": {
+      "CLX-SPF": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-06",
+          "spareDate": "2026-03-06",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-06",
+          "spareDate": "2026-03-06",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-06",
+          "spareDate": "2026-03-06",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "SPF-BPP": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-05",
+          "spareDate": "2026-03-05",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-05",
+          "spareDate": "2026-03-05",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-29",
+          "remarks": ""
+        }
+      },
+      "BPP-APL": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-12",
+          "spareDate": "2026-03-12",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-12",
+          "spareDate": "2026-03-12",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-12",
+          "spareDate": "2026-03-12",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-02",
+          "remarks": ""
+        }
+      },
+      "APL-NDO": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-12",
+          "spareDate": "2026-03-12",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-12",
+          "spareDate": "2026-03-12",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-12",
+          "spareDate": "2026-03-12",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-02",
+          "remarks": ""
+        }
+      },
+      "NDO-TSR": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-27",
+          "spareDate": "2026-03-27",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-27",
+          "spareDate": "2026-03-27",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-27",
+          "spareDate": "2026-03-27",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-02",
+          "remarks": ""
+        }
+      }
+    },
+    "JE/T/TEL": {
+      "TSR-TEL": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-19",
+          "spareDate": "2026-03-19",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-19",
+          "spareDate": "2026-03-19",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-19",
+          "spareDate": "2026-03-19",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-02",
+          "remarks": ""
+        }
+      },
+      "TEL-DIG": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-24",
+          "spareDate": "2026-03-24",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-24",
+          "spareDate": "2026-03-24",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-24",
+          "spareDate": "2026-03-24",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-02",
+          "remarks": ""
+        }
+      },
+      "DIG-PVD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2025-07-11",
+          "spareDate": "2025-12-18",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-07-11",
+          "spareDate": "2025-12-18",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2025-07-11",
+          "spareDate": "2025-12-18",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-02",
+          "remarks": ""
+        }
+      },
+      "PVD-KCC": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2025-07-11",
+          "spareDate": "2025-12-18",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-07-11",
+          "spareDate": "2025-12-18",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2025-07-11",
+          "spareDate": "2025-12-18",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-01-02",
+          "remarks": ""
+        }
+      }
+    }
+  },
+  "SSE/T/M/BZA": {
+    "SSE/T/KI": {
+      "KI R/R-HUT 1": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-05",
+          "spareDate": "2025-10-09",
+          "remarks": "In R/R patch not matching (required FC-SC 20Mtrs)"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "KI R/R-HUT 2": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-16",
+          "spareDate": "2025-10-10",
+          "remarks": "In R/R patch not matching (required FC-SC 20Mtrs)"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "KI HUT 2 - KI HUT 3": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-16",
+          "spareDate": "2025-10-10",
+          "remarks": "In R/R patch not matching (required FC-SC 20Mtrs)"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "KI-RYP": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-05",
+          "spareDate": "2025-10-10",
+          "remarks": "Nil"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-10",
+          "remarks": ""
+        }
+      },
+      "RYP R/R - HUT 1": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-05",
+          "spareDate": "2025-10-20",
+          "remarks": "In R/R patch not matching (required FC-SC 20Mtrs)"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "RYP R/R - HUT 2": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-05",
+          "spareDate": "2025-10-20",
+          "remarks": "In R/R patch not matching (required FC-SC 20Mtrs)"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "RYP HUT 2 - HUT 3": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-05",
+          "spareDate": "2025-10-20",
+          "remarks": "In R/R patch not matching (required FC-SC 20Mtrs)"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "KI-RYP WS": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "_"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-10",
+          "remarks": ""
+        }
+      },
+      "RYP WS-RYP": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "_"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-10",
+          "remarks": ""
+        }
+      },
+      "RYP-NWBH": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-05",
+          "spareDate": "2025-10-20",
+          "remarks": "Nil"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-10",
+          "remarks": ""
+        }
+      },
+      "NWBH-CR.Cabin": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-03",
+          "spareDate": "2025-11-14",
+          "remarks": "Nil"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "NWBH-D Cabin": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-03",
+          "spareDate": "2025-11-14",
+          "remarks": "Nil"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "NWBH-Bulb Cabin": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-03",
+          "spareDate": "2025-11-14",
+          "remarks": "Nil"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "CR Cabin - D Cabin": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-03",
+          "spareDate": "2025-11-14",
+          "remarks": "Nil"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "CR Cabin - Bulb Cabin": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-03",
+          "spareDate": "2025-11-14",
+          "remarks": "Nil"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "D Cabin - D Goomty": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-17",
+          "spareDate": "2025-11-09",
+          "remarks": "Nil"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "BULB Cabin - VNEC": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-17",
+          "spareDate": "2025-11-09",
+          "remarks": "Nil"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "D Goomty - F Cabin": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-12",
+          "spareDate": "2025-11-26",
+          "remarks": "Nil"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "F Cabin - F Goomty": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-12",
+          "spareDate": "2025-11-26",
+          "remarks": "Nil"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "BZA-KCC": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "_"
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      }
+    },
+    "JE/T/M/BZA": {
+      "BZA-VNEC": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-24",
+          "remarks": ""
+        }
+      },
+      "VNEC-MDUN": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-24",
+          "remarks": ""
+        }
+      },
+      "MDUN-RMV": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-24",
+          "remarks": ""
+        }
+      },
+      "RMV-NDM": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-24",
+          "remarks": ""
+        }
+      },
+      "BZA-GALA": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-01-29",
+          "spareDate": "2025-11-08",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "VNEC-Goomy 1": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-01-29",
+          "spareDate": "2025-11-08",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "Goomty 1 - Goomty 2": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-01-29",
+          "spareDate": "2025-11-08",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "Goomty 2 - GALA": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-01-29",
+          "spareDate": "2025-11-08",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "GALA - MBD": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-06-25",
+          "spareDate": "2025-04-10",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "GALA - Goomty 3": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-06-25",
+          "spareDate": "2025-04-10",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "Goomty 3 - Goomty 4": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-06-25",
+          "spareDate": "2025-04-10",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "Goomty 4 - Goomty 5": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-06-25",
+          "spareDate": "2025-04-10",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "Goomty 5 - MBD": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-06-25",
+          "spareDate": "2025-04-10",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "MBD - New Goomty (Near LC 319)": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-12-22",
+          "spareDate": "2025-12-22",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "MBD - GWM": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-01-22",
+          "spareDate": "2025-11-18",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "MBD - Goomty 6": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-01-22",
+          "spareDate": "2025-11-18",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "Goomty 6 - Goomty 7": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-01-22",
+          "spareDate": "2025-11-18",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "Goomty 7 - Goomty 8": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-01-22",
+          "spareDate": "2025-11-18",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "Goomty 8 - Goomty 9": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-01-22",
+          "spareDate": "2025-11-18",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "Goomty 9- GWM": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-01-22",
+          "spareDate": "2025-11-18",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "GWM - PAVP": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-08-16",
+          "spareDate": "2025-04-24",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "PAVP - ABS Hut near LC 327": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-23",
+          "spareDate": "2025-11-04",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "ABS Hut near LC 327 - TOU": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-23",
+          "spareDate": "2025-11-04",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "TOU - NZD": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-14",
+          "spareDate": "2025-11-26",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "TOU - ABS Hut near LC 332": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-14",
+          "spareDate": "2025-11-26",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      },
+      "ABS Hut near LC 332 - NZD": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-14",
+          "spareDate": "2025-11-26",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-08-21",
+          "remarks": ""
+        }
+      }
+    }
+  },
+  "SSE/T/EE": {
+    "SSE/T/NDD": {
+      "CU-KVR": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-11-08",
+          "spareDate": "2026-02-28",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      },
+      "CU-NDD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-12-16",
+          "spareDate": "2026-03-12",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      },
+      "NDD-NBM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2025-10-01",
+          "spareDate": "2026-01-19",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-03",
+          "spareDate": "2025-11-07",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      },
+      "TDD-NBM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-11-18",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      }
+    },
+    "JE/T/TDD": {
+      "TDD-ABS HUT": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-19",
+          "spareDate": "2025-10-27",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      },
+      "ABS HUT-BPY": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-19",
+          "spareDate": "2025-10-27",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      },
+      "BPY-ABS HUT at LC 367": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-07",
+          "spareDate": "2025-11-18",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      },
+      "ABS HUT at LC 367-ABS HUT UNGT": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-07",
+          "spareDate": "2025-11-18",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      },
+      "ABS HUT UNGT-CEL": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-07",
+          "spareDate": "2025-11-18",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      },
+      "CEL-ABS HUT KKRM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-01-28",
+          "spareDate": "2025-10-30",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      },
+      "ABS HUT KKRM-PUA": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-01-28",
+          "spareDate": "2025-10-30",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      },
+      "PUA-ABS HUT LC 362": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-04",
+          "spareDate": "",
+          "remarks": "ABS commissioned on 10.3.26"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      },
+      "ABS HUT LC 362-BMD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-04",
+          "spareDate": "",
+          "remarks": "ABS commissioned on 10.3.26"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-29",
+          "remarks": ""
+        }
+      }
+    },
+    "JE/T/EE": {
+      "BMD-DEL": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-02",
+          "spareDate": "",
+          "remarks": "ABS commissioned on 10.3.26"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-12-29",
+          "remarks": ""
+        }
+      },
+      "DEL-EE": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-28",
+          "spareDate": "",
+          "remarks": "ABS commissioned on 10.3.28"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2027-12-29",
+          "remarks": ""
+        }
+      },
+      "EE-VAT": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-01-22",
+          "spareDate": "2026-02-11",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2028-12-29",
+          "remarks": ""
+        }
+      },
+      "VAT-NZD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-02-23",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "NA"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2029-12-29",
+          "remarks": ""
+        }
+      }
+    }
+  },
+  "SSE/T/RJY": {
+    "JE/T/RJY": {
+      "KVR-RJY": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-01-26",
+          "spareDate": "2025-10-10",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-28",
+          "remarks": ""
+        }
+      },
+      "KVR-GVN": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-06-19",
+          "spareDate": "2025-10-07",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-28",
+          "remarks": ""
+        }
+      },
+      "GVN-RJY": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-30",
+          "remarks": "RJY EI-OC"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-01-26",
+          "spareDate": "2025-06-19",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-28",
+          "remarks": ""
+        }
+      },
+      "RJY-KYM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-09-24",
+          "spareDate": "2026-03-30",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-28",
+          "remarks": ""
+        }
+      },
+      "KYM-DWP": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-09-15",
+          "spareDate": "2025-07-15",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-28",
+          "remarks": ""
+        }
+      },
+      "DWP-APT": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-09-03",
+          "spareDate": "2025-11-24",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-28",
+          "remarks": ""
+        }
+      }
+    }
+  },
+  "SSE/T/SLO": {
+    "JE/T/SLO": {
+      "APT - BVL": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-03-25",
+          "spareDate": "2025-10-14",
+          "remarks": "BVL R/R-south goomty"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-25",
+          "spareDate": "2025-10-15",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2026-03-26",
+          "spareDate": "2026-03-26",
+          "remarks": ""
+        }
+      },
+      "BVL - MPU": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-25",
+          "spareDate": "2025-10-14",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2027-03-26",
+          "spareDate": "2027-03-26",
+          "remarks": ""
+        }
+      },
+      "MPU - SLO": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-05",
+          "spareDate": "2026-01-05",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2028-03-26",
+          "spareDate": "2028-03-26",
+          "remarks": ""
+        }
+      },
+      "SLO - PAP": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-03-23",
+          "spareDate": "2025-09-19",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2029-03-26",
+          "spareDate": "2029-03-26",
+          "remarks": ""
+        }
+      }
+    },
+    "JE/T/SW/COA": {
+      "SLO - SPVM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2030-03-26",
+          "spareDate": "2030-03-26",
+          "remarks": ""
+        }
+      },
+      "SPVM - CCT": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2031-03-26",
+          "spareDate": "2031-03-26",
+          "remarks": ""
+        }
+      },
+      "CCT-NCOA": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2032-03-26",
+          "spareDate": "2032-03-26",
+          "remarks": ""
+        }
+      },
+      "NCOA-COA": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "-"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2033-03-26",
+          "spareDate": "2033-03-26",
+          "remarks": ""
+        }
+      }
+    }
+  },
+  "SSE/T/TUNI": {
+    "JE/T/TUNI": {
+      "PAP - GLP": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-02-11",
+          "spareDate": "2026-02-11",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-24",
+          "remarks": "--"
+        }
+      },
+      "GLP - RVD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-08-21",
+          "spareDate": "2025-08-21",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-24",
+          "remarks": "--"
+        }
+      },
+      "RVD - ANV": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-11-11",
+          "spareDate": "2025-11-11",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-24",
+          "remarks": "--"
+        }
+      },
+      "ANV - HVM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-11-11",
+          "spareDate": "2025-11-11",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-24",
+          "remarks": "--"
+        }
+      },
+      "HVM - TUNI": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-11-12",
+          "spareDate": "2025-11-12",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-24",
+          "remarks": "--"
+        }
+      }
+    },
+    "JE/T/YLM": {
+      "TUNI - GLU": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-07-31",
+          "spareDate": "2025-07-31",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-23",
+          "remarks": "--"
+        }
+      },
+      "GLU - NRP": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-07-16",
+          "spareDate": "2025-07-16",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-23",
+          "remarks": "--"
+        }
+      },
+      "NRP - REG": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-07-16",
+          "spareDate": "2025-07-16",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-23",
+          "remarks": "--"
+        }
+      },
+      "REG - YLM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-10-01",
+          "spareDate": "2025-10-01",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-23",
+          "remarks": "--"
+        }
+      },
+      "YLM STATION EI": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-04",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        }
+      }
+    },
+    "SSE/T/AKP": {
+      "YLM - NASP": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-23",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-11",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-23",
+          "remarks": "--"
+        }
+      },
+      "NASP - BVM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-23",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-04",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-23",
+          "remarks": "--"
+        }
+      },
+      "BVM - AKP": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-23",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-04",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-23",
+          "remarks": "--"
+        }
+      },
+      "AKP -THY": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-23",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-12",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-23",
+          "remarks": "--"
+        }
+      },
+      "THY - DVD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-13",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-12-30",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2024-03-13",
+          "remarks": "--"
+        }
+      }
+    }
+  },
+  "SSE/T/GDV": {
+    "SSE/T/GDV II": {
+      "NDM-UPL": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-09-05",
+          "remarks": ""
+        }
+      },
+      "UPL-IDP": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-03",
+          "remarks": ""
+        }
+      },
+      "IDP-GDV": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-03-04",
+          "spareDate": "2026-03-04",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2026-03-04",
+          "spareDate": "2026-03-04",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-03",
+          "remarks": ""
+        }
+      },
+      "GDV-OTR": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-09-05",
+          "remarks": ""
+        }
+      },
+      "OTR--MDVL": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-09-05",
+          "remarks": ""
+        }
+      },
+      "MDVL-KKLR": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-09-05",
+          "remarks": ""
+        }
+      },
+      "KKLR-PLVA (halt)": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2025-10-13",
+          "spareDate": "2025-10-13",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2025-10-13",
+          "spareDate": "2025-10-13",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2025-09-05",
+          "remarks": ""
+        }
+      }
+    },
+    "SSE/TGDV": {
+      "GDV Yard": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-02-21",
+          "spareDate": "2026-02-21",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      },
+      "GDV-GVL": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-03",
+          "remarks": ""
+        }
+      },
+      "GVL-KVM": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-03",
+          "remarks": ""
+        }
+      },
+      "KVM-PAV": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-03",
+          "remarks": ""
+        }
+      },
+      "PAV-CLU": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-03",
+          "remarks": ""
+        }
+      },
+      "CLU-MTM": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "2026-03-03",
+          "remarks": ""
+        }
+      },
+      "MTM Yard": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2025-06-25",
+          "spareDate": "2025-10-30",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      }
+    }
+  },
+  "SSE/T/BVRM": {
+    "SSE/T/BVRM": {
+      "KKLR-AKVD": {
+        "EI": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "MSDAC": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "2025-10-04",
+          "spareDate": "2025-10-04",
+          "remarks": ""
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2025-05-02",
+          "spareDate": "2025-05-02",
+          "remarks": ""
+        }
+      },
+      "AKVD-UNDI": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2025-05-02",
+          "spareDate": "2025-05-02",
+          "remarks": ""
+        }
+      },
+      "UNDI-BVRM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2025-05-02",
+          "spareDate": "2025-05-02",
+          "remarks": ""
+        }
+      },
+      "BVRM-PAGM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2026-02-17",
+          "spareDate": "2026-02-17",
+          "remarks": ""
+        }
+      },
+      "PAGM-VVM": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2026-02-17",
+          "spareDate": "2026-02-17",
+          "remarks": ""
+        }
+      },
+      "VVM-PKO": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2026-02-17",
+          "spareDate": "2026-02-17",
+          "remarks": ""
+        }
+      },
+      "PKO-NS": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2026-02-17",
+          "spareDate": "2026-02-17",
+          "remarks": ""
+        }
+      },
+      "NS YARD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-06",
+          "spareDate": "2026-01-06",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-01-06",
+          "spareDate": "2026-01-06",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      }
+    },
+    "JE/T/TNKU": {
+      "BVRM-AVLI": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2026-02-16",
+          "spareDate": "2026-02-16",
+          "remarks": ""
+        }
+      },
+      "AVLI-AL": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2026-02-16",
+          "spareDate": "2026-02-16",
+          "remarks": ""
+        }
+      },
+      "AL-TNKU": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2026-02-16",
+          "spareDate": "2026-02-16",
+          "remarks": ""
+        }
+      },
+      "TNKU-KLDI": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2026-02-16",
+          "spareDate": "2026-02-16",
+          "remarks": ""
+        }
+      },
+      "KLDI-NDD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": true,
+          "workingDate": "2026-02-16",
+          "spareDate": "2026-02-16",
+          "remarks": ""
+        }
+      },
+      "BVRM YARD": {
+        "EI": {
+          "isApplicable": true,
+          "workingDate": "2026-01-07",
+          "spareDate": "2026-01-07",
+          "remarks": "--"
+        },
+        "MSDAC": {
+          "isApplicable": true,
+          "workingDate": "2026-01-07",
+          "spareDate": "2026-01-07",
+          "remarks": "--"
+        },
+        "IB": {
+          "isApplicable": true,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": "--"
+        },
+        "STM-1": {
+          "isApplicable": false,
+          "workingDate": "",
+          "spareDate": "",
+          "remarks": ""
+        }
+      }
+    }
+  }
+}
