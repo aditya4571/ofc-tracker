@@ -7,9 +7,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .overdue-input {
-            border-color: #ef4444 !important; /* Red-500 */
-            background-color: #fef2f2 !important; /* Red-50 */
-            color: #b91c1c !important; /* Red-700 */
+            border-color: #ef4444 !important; 
+            background-color: #fef2f2 !important; 
+            color: #b91c1c !important; 
         }
         .overdue-text {
             color: #ef4444;
@@ -25,8 +25,6 @@
             pointer-events: none;
             filter: grayscale(100%);
         }
-
-        /* Modal Background */
         #ghModal { background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); }
 
         /* --- PRINT CSS --- */
@@ -86,7 +84,7 @@
 <body class="bg-slate-100 text-slate-800 font-sans h-screen flex flex-col relative">
 
     <header class="bg-blue-800 text-white p-4 shadow-md flex-shrink-0">
-        <div class="container mx-auto flex flex-col xl:flex-row justify-between items-center gap-4">
+        <div class="container mx-auto flex flex-col lg:flex-row justify-between items-center gap-4">
             <div class="flex items-center gap-3">
                 <h1 class="text-xl md:text-2xl font-bold whitespace-nowrap">BZA DIV OFC Tracker</h1>
                 <span id="syncStatus" class="bg-gray-600 text-xs px-2 py-1 rounded-full flex items-center gap-1 font-bold">
@@ -227,7 +225,7 @@
                     </div>
                 </div>
                 
-                <div class="overflow-x-auto rounded border w-full">
+                <div id="reportTableWrapper" class="overflow-x-auto rounded border w-full">
                     <table class="min-w-full bg-white">
                         <thead class="bg-slate-800 text-white">
                             <tr>
@@ -242,6 +240,10 @@
                         </thead>
                         <tbody id="reportTableBody" class="text-sm divide-y divide-gray-200"></tbody>
                     </table>
+                </div>
+                <div id="noOverdueMsg" class="hidden text-center p-6 bg-green-50 text-green-700 rounded border border-green-200 mt-4">
+                    <span class="text-2xl block mb-2">✅</span>
+                    <span class="font-bold">All Good!</span> No overdue testing found for the selected filters.
                 </div>
             </div>
         </section>
@@ -273,7 +275,6 @@
     </main>
 
     <script>
-        // --- NEW DATA HIERARCHY STRUCTURE ---
         const sectionHierarchy = {
             "SSE/T/NLR": {
                 "JE/T/NLR": ["TMC - KJJ", "KJJ - PGU", "PGU - NLR", "NLR - VDE"],
@@ -370,12 +371,9 @@
         }
 
         function loadLocalDB() {
-            db = JSON.parse(localStorage.getItem('ofcDb_v12')) || JSON.parse(localStorage.getItem('ofcDb_v11')) || JSON.parse(localStorage.getItem('ofcDb_v10'));
-            if (!db) {
-                db = {};
-            }
+            db = JSON.parse(localStorage.getItem('ofcDb_v13')) || JSON.parse(localStorage.getItem('ofcDb_v12')) || JSON.parse(localStorage.getItem('ofcDb_v11'));
+            if (!db) db = {};
             
-            // Re-apply master hierarchy to ensure any new sections are added
             for (let inc in sectionHierarchy) {
                 if(!db[inc]) db[inc] = {};
                 for (let sec in sectionHierarchy[inc]) {
@@ -390,14 +388,18 @@
                     });
                 }
             }
-            localStorage.setItem('ofcDb_v12', JSON.stringify(db));
+            localStorage.setItem('ofcDb_v13', JSON.stringify(db));
         }
 
         // GitHub API Integration
         async function loadFromGitHub() {
             try {
-                const res = await fetch(`https://api.github.com/repos/${ghConfig.owner}/${ghConfig.repo}/contents/data.json`, {
-                    headers: { 'Authorization': `token ${ghConfig.token}` }
+                // Cache-Busting parameter ensures we don't fetch an old version of data.json
+                const res = await fetch(`https://api.github.com/repos/${ghConfig.owner}/${ghConfig.repo}/contents/data.json?t=${new Date().getTime()}`, {
+                    headers: { 
+                        'Authorization': `token ${ghConfig.token}`,
+                        'Cache-Control': 'no-cache'
+                    }
                 });
                 if (res.ok) {
                     const data = await res.json();
@@ -406,8 +408,6 @@
                     const cloudDb = JSON.parse(jsonStr);
                     if(Object.keys(cloudDb).length > 0) {
                         db = cloudDb;
-                        
-                        // Merge missing hierarchy into cloud data if schema changed
                         for (let inc in sectionHierarchy) {
                             if(!db[inc]) db[inc] = {};
                             for (let sec in sectionHierarchy[inc]) {
@@ -423,7 +423,7 @@
                             }
                         }
                         
-                        localStorage.setItem('ofcDb_v12', JSON.stringify(db)); // backup locally
+                        localStorage.setItem('ofcDb_v13', JSON.stringify(db)); 
                         return true;
                     }
                 }
@@ -432,7 +432,7 @@
         }
 
         async function saveToGitHub() {
-            if (!ghConfig.token) return true; // If offline, pretend it succeeded
+            if (!ghConfig.token) return true; 
             try {
                 const jsonStr = JSON.stringify(db, null, 2);
                 const content = window.btoa(unescape(encodeURIComponent(jsonStr)));
@@ -581,11 +581,16 @@
             const newBlock = prompt(`Enter new Block Section name for:\n${sec}`);
             if (newBlock && newBlock.trim() !== "") {
                 const blockName = newBlock.trim();
-                if(!db[inc][sec][blockName]) {
-                    db[inc][sec][blockName] = {};
-                    eqTypes.forEach(eq => db[inc][sec][blockName][eq.id] = { isApplicable: false, workingDate: "", spareDate: "", remarks: "" });
-                    saveData(); // Save entirely
+                if(db[inc][sec][blockName]) {
+                    alert("This Block Section already exists!");
+                    document.getElementById("blockSelect").value = blockName;
+                    loadDataForSection();
+                    return;
                 }
+                
+                db[inc][sec][blockName] = {};
+                eqTypes.forEach(eq => db[inc][sec][blockName][eq.id] = { isApplicable: false, workingDate: "", spareDate: "", remarks: "" });
+                saveData(); 
                 populateBlockSections();
                 document.getElementById("blockSelect").value = blockName;
                 loadDataForSection();
@@ -652,7 +657,7 @@
                 };
             });
 
-            localStorage.setItem('ofcDb_v12', JSON.stringify(db));
+            localStorage.setItem('ofcDb_v13', JSON.stringify(db));
 
             const cloudSaved = await saveToGitHub();
 
@@ -676,10 +681,17 @@
 
         function getOverdueDays(dateStr) {
             if (!dateStr) return 0;
-            const testDate = new Date(dateString = dateStr);
+            // Ensure proper parsing by manually breaking down "YYYY-MM-DD"
+            const parts = dateStr.split('-');
+            if(parts.length !== 3) return 0;
+            
+            const testDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+            if(isNaN(testDate.getTime())) return 0;
+            
             const today = new Date();
-            today.setHours(0,0,0,0); testDate.setHours(0,0,0,0);
-            return Math.floor((today - testDate) / (1000 * 60 * 60 * 24));
+            today.setHours(0,0,0,0);
+            
+            return Math.floor((today.getTime() - testDate.getTime()) / (1000 * 60 * 60 * 24));
         }
 
         function checkOverdueUI(inputId, dateString, fiberType) {
@@ -748,6 +760,8 @@
             const sortDir = document.getElementById("reportSortSelect").value;
             const tbody = document.getElementById("reportTableBody");
             const noMsg = document.getElementById("noOverdueMsg");
+            const wrapper = document.getElementById("reportTableWrapper");
+            
             tbody.innerHTML = "";
             let rows = [];
 
@@ -776,7 +790,9 @@
             }
 
             if (rows.length > 0) {
-                noMsg.classList.add("hidden"); tbody.parentElement.classList.remove("hidden");
+                noMsg.classList.add("hidden"); 
+                wrapper.classList.remove("hidden");
+                
                 rows.sort((a, b) => sortDir === 'desc' ? b.daysOverdue - a.daysOverdue : a.daysOverdue - b.daysOverdue);
                 rows.forEach(r => {
                     const tr = document.createElement("tr"); tr.className = "hover:bg-red-50 border-b";
@@ -784,7 +800,8 @@
                     tbody.appendChild(tr);
                 });
             } else {
-                noMsg.classList.remove("hidden"); tbody.parentElement.classList.add("hidden");
+                noMsg.classList.remove("hidden"); 
+                wrapper.classList.add("hidden");
             }
         }
 
@@ -889,7 +906,7 @@
                     }
                 }
                 
-                localStorage.setItem('ofcDb_v12', JSON.stringify(db));
+                localStorage.setItem('ofcDb_v13', JSON.stringify(db));
                 
                 if(ghConfig.token) {
                     updateSyncStatus("🔄 Syncing Import...", "bg-yellow-500");
