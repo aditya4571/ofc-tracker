@@ -1,1 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFC Testing Dates & Overdue Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .overdue-input {
+            border-color: #ef4444 !important; /* Red-500 */
+            background-color: #fef2f2 !important; /* Red-50 */
+            color: #b91c1c !important; /* Red-700 */
+        }
+        .overdue-text {
+            color: #ef4444;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+            display: block;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        .equipment-disabled {
+            opacity: 0.4;
+            pointer-events: none;
+            filter: grayscale(100%);
+        }
 
+        /* Modal Background */
+        #ghModal { background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); }
+
+        /* --- PRINT CSS --- */
+        @media print {
+            body, html {
+                height: auto !important;
+                background-color: white !important;
+                display: block !important;
+            }
+            main {
+                height: auto !important;
+                overflow: visible !important;
+                display: block !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .overflow-x-auto, .overflow-auto {
+                overflow: visible !important;
+            }
+            header, .no-print {
+                display: none !important;
+            }
+            .shadow, .shadow-md, .shadow-sm, .shadow-lg, .rounded-xl {
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+                border-radius: 0 !important;
+            }
+            .border-t-4 {
+                border-top: 2px solid #333 !important;
+            }
+            select, input {
+                appearance: none;
+                border: none !important;
+                background: transparent !important;
+                font-weight: bold;
+                color: #000 !important;
+            }
+            table {
+                width: 100% !important;
+                border-collapse: collapse !important;
+            }
+            th, td {
+                border: 1px solid #aaa !important;
+                padding: 8px !important;
+                color: #000 !important;
+            }
+            thead th {
+                background-color: #f0f0f0 !important;
+                color: #000 !important;
+            }
+            tr { page-break-inside: avoid; }
+            .grid { display: block !important; }
+            .grid > div { margin-bottom: 20px; page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 font-sans h-screen flex flex-col relative">
+
+    <header class="bg-blue-800 text-white p-4 shadow-md flex-shrink-0">
+        <div class="container mx-auto flex flex-col xl:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <h1 class="text-xl md:text-2xl font-bold whitespace-nowrap">BZA DIV OFC Tracker</h1>
+                <span id="syncStatus" class="bg-gray-600 text-xs px-2 py-1 rounded-full flex items-center gap-1 font-bold">
+                    ⚪ Offline Mode
+                </span>
+            </div>
+            
+            <div class="flex flex-wrap items-center gap-2 md:gap-4 justify-center">
+                <button onclick="switchTab('entry')" id="btn-tab-entry" class="bg-blue-900 hover:bg-blue-700 px-3 py-2 rounded font-semibold transition text-gray-300 text-sm shadow flex items-center gap-1">
+                    🔒 Data Entry
+                </button>
+                <button onclick="switchTab('report')" id="btn-tab-report" class="bg-blue-900 hover:bg-blue-700 px-3 py-2 rounded font-semibold transition text-gray-300 text-sm shadow">
+                    Overdue Report
+                </button>
+                <button onclick="switchTab('alldata')" id="btn-tab-alldata" class="bg-blue-500 px-3 py-2 rounded font-semibold transition text-white text-sm shadow">
+                    View All Data
+                </button>
+                
+                <div class="border-l border-blue-600 pl-4 flex flex-wrap gap-2 items-center">
+                    <button onclick="window.print()" class="bg-gray-100 text-blue-900 hover:bg-gray-300 px-3 py-2 rounded font-bold transition text-sm shadow flex items-center">
+                        🖨️ Print
+                    </button>
+                    <button onclick="openGhModal()" class="bg-purple-600 hover:bg-purple-500 px-3 py-2 rounded font-bold transition text-sm shadow text-white flex items-center">
+                        ☁️ Cloud Setup
+                    </button>
+                    <label class="cursor-pointer bg-green-600 hover:bg-green-500 px-3 py-2 rounded font-semibold transition text-sm flex items-center shadow text-white">
+                        <span>📥 Import CSV</span>
+                        <input type="file" id="fileUpload" accept=".csv" onchange="handleFileUpload(event)">
+                    </label>
+                    <button onclick="exportData(false)" class="bg-amber-600 hover:bg-amber-500 px-3 py-2 rounded font-semibold transition text-sm shadow text-white">
+                        📤 Export Full
+                    </button>
+                    <button onclick="exportData(true)" class="bg-red-600 hover:bg-red-500 px-3 py-2 rounded font-semibold transition text-sm shadow text-white">
+                        🚨 Export Overdue
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="ghModal" class="fixed inset-0 z-50 hidden flex justify-center items-center">
+        <div class="bg-white rounded-xl shadow-2xl p-8 max-w-md w-full border-t-8 border-purple-600">
+            <h2 class="text-2xl font-bold mb-4 text-purple-800">☁️ Cloud Sync Settings</h2>
+            <p class="text-sm text-gray-600 mb-6">Enter your GitHub details to sync data directly to your repository's <code class="bg-gray-100 px-1 rounded">data.json</code> file.</p>
+            
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-1">GitHub Username</label>
+                    <input type="text" id="ghOwner" placeholder="e.g. johndoe" class="w-full border rounded p-2 focus:ring-purple-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-1">Repository Name</label>
+                    <input type="text" id="ghRepo" placeholder="e.g. ofc-tracker" class="w-full border rounded p-2 focus:ring-purple-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 mb-1">Personal Access Token (PAT)</label>
+                    <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxx" class="w-full border rounded p-2 focus:ring-purple-500">
+                </div>
+            </div>
+            
+            <div class="mt-8 flex justify-end gap-3">
+                <button onclick="closeGhModal()" class="px-4 py-2 text-gray-600 font-bold hover:bg-gray-100 rounded">Cancel</button>
+                <button onclick="saveGhSettings()" class="bg-purple-600 text-white px-6 py-2 rounded font-bold hover:bg-purple-700 shadow">Save & Connect</button>
+            </div>
+        </div>
+    </div>
+
+    <main class="container mx-auto flex-grow p-4 overflow-auto">
+        
+        <section id="tab-entry" class="space-y-6 hidden">
+            <div class="bg-white p-6 rounded-xl shadow border-t-4 border-blue-600">
+                <h2 class="text-xl font-bold mb-4 border-b pb-2 text-blue-800 no-print">Select Section</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-1">INCHARGE SSE / Section</label>
+                        <select id="inchargeSelect" onchange="populateSectionalSelect()" class="w-full border-gray-300 border rounded p-2 shadow-sm">
+                            <option value="">-- Select Incharge --</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-1">SECTIONAL SSE / JE</label>
+                        <select id="sectionalSelect" onchange="populateBlockSections()" disabled class="w-full border-gray-300 border rounded p-2 bg-gray-100 shadow-sm cursor-not-allowed">
+                            <option value="">-- Select Sectional --</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-1 no-print">Block Section / IB / ABS HUTs</label>
+                        <div class="flex gap-2">
+                            <select id="blockSelect" onchange="loadDataForSection()" disabled class="w-full border-gray-300 border rounded p-2 bg-gray-100 shadow-sm cursor-not-allowed">
+                                <option value="">-- Select Block --</option>
+                            </select>
+                            <button id="addBlockBtn" onclick="addNewBlock()" disabled class="bg-gray-200 text-gray-500 px-3 py-2 rounded shadow-sm font-bold no-print cursor-not-allowed">+ New</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="dataForm" class="hidden bg-white p-6 rounded-xl shadow space-y-6 border-t-4 border-green-500">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-4 gap-4">
+                    <h2 class="text-xl font-bold text-gray-800" id="equipmentHeader">Equipment Testing Data</h2>
+                    <button onclick="saveData()" id="saveBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded font-bold transition shadow-lg w-full sm:w-auto no-print flex justify-center items-center gap-2">
+                        💾 Save Changes
+                    </button>
+                </div>
+                
+                <p class="text-sm text-gray-600 bg-blue-50 p-3 rounded border border-blue-100 border-l-4 border-l-blue-400 no-print">
+                    ℹ️ <b>Instructions:</b> Check <b>"Applicable"</b> if the equipment exists. Testing Periodicity is <b>180 Days (Working)</b> and <b>90 Days (Spare)</b>. <br>
+                    <span class="text-red-600 font-semibold">Note: For STM-1, both Working and Spare fibers have a strict 90 Days limit.</span>
+                </p>
+                
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-6" id="equipmentGrids">
+                    </div>
+            </div>
+        </section>
+
+        <section id="tab-report" class="space-y-6 hidden">
+            <div class="bg-white p-6 rounded-xl shadow border-t-4 border-red-500">
+                <div class="flex flex-col xl:flex-row justify-between items-start xl:items-center mb-4 border-b pb-4 gap-4">
+                    <div>
+                        <h2 class="text-xl font-bold text-red-700">🚨 Overdue Testing Report</h2>
+                    </div>
+                    
+                    <div class="flex flex-wrap items-center gap-2 no-print">
+                        <select id="reportSseSelect" onchange="generateReport()" class="border border-gray-300 rounded p-1 text-sm font-semibold text-blue-800">
+                            <option value="ALL">All Sections</option>
+                        </select>
+                        <select id="reportEqSelect" onchange="generateReport()" class="border border-gray-300 rounded p-1 text-sm font-semibold text-blue-800">
+                            <option value="ALL">All Equipment</option>
+                            <option value="EI">EI</option>
+                            <option value="MSDAC">MSDAC</option>
+                            <option value="IB">IB</option>
+                            <option value="STM-1">STM-1</option>
+                        </select>
+                        <select id="reportSortSelect" onchange="generateReport()" class="border border-gray-300 rounded p-1 text-sm font-semibold text-blue-800">
+                            <option value="desc">Days (High to Low)</option>
+                            <option value="asc">Days (Low to High)</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="overflow-x-auto rounded border w-full">
+                    <table class="min-w-full bg-white">
+                        <thead class="bg-slate-800 text-white">
+                            <tr>
+                                <th class="py-3 px-4 text-left text-sm font-semibold">INCHARGE SSE</th>
+                                <th class="py-3 px-4 text-left text-sm font-semibold">SECTIONAL SSE/JE</th>
+                                <th class="py-3 px-4 text-left text-sm font-semibold">Block Section</th>
+                                <th class="py-3 px-4 text-left text-sm font-semibold">Eq.</th>
+                                <th class="py-3 px-4 text-left text-sm font-semibold">Fiber Type</th>
+                                <th class="py-3 px-4 text-left text-sm font-semibold">Last Tested Date</th>
+                                <th class="py-3 px-4 text-left text-sm font-semibold text-red-400">Days Overdue</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reportTableBody" class="text-sm divide-y divide-gray-200"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="tab-alldata" class="space-y-6 block">
+            <div class="bg-white p-6 rounded-xl shadow border-t-4 border-purple-600">
+                <div class="flex justify-between items-center mb-4 border-b pb-4 gap-4">
+                    <h2 class="text-xl font-bold text-purple-800">📊 Master Database View</h2>
+                    <input type="text" id="masterSearch" placeholder="Search..." class="border p-2 rounded no-print text-sm font-semibold" onkeyup="filterMasterTable()">
+                </div>
+                <div class="overflow-x-auto rounded border w-full">
+                    <table class="min-w-full bg-white" id="masterTable">
+                        <thead class="bg-slate-800 text-white">
+                            <tr>
+                                <th class="py-3 px-4 text-left text-sm">INCHARGE SSE</th>
+                                <th class="py-3 px-4 text-left text-sm">SECTIONAL SSE/JE</th>
+                                <th class="py-3 px-4 text-left text-sm">Block Section</th>
+                                <th class="py-3 px-4 text-left text-sm">Eq.</th>
+                                <th class="py-3 px-4 text-left text-sm">Working Date</th>
+                                <th class="py-3 px-4 text-left text-sm">Spare Date</th>
+                                <th class="py-3 px-4 text-left text-sm">Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody id="allDataTableBody" class="text-sm divide-y divide-gray-200"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // --- NEW DATA HIERARCHY STRUCTURE ---
+        const sectionHierarchy = {
+            "SSE/T/NLR": {
+                "JE/T/NLR": ["TMC - KJJ", "KJJ - PGU", "PGU - NLR", "NLR - VDE"],
+                "SSE/T/GDR": ["VDE - HUT 6", "HUT 6 - VKT", "VKT - KMLP", "VKT - VR JN", "KMLP - MBL", "KMLP - VR JN", "MBL - GDR"]
+            },
+            "SSE/T/BTTR": {
+                "JE/T/BTTR": ["TMC-AXR", "AXR-BTTR", "BTTR-SVPM", "SVPM-KVZ IB"],
+                "JE/T/KVZ": ["KVZ-SVPM IB", "KVZ-TTU IB", "TTU-KVZ IB", "UPD-TTU IB", "TTU-UPD IB", "UPD-SKM IB", "SKM-UPD IB"]
+            },
+            "SSE/T/OGL": {
+                "JE/T/OGL": ["SKM YARD", "SKM-TNR IB", "TNR-SKM IB", "TNR YARD", "TNR-SDM IB", "SDM-TNR IB", "SDM YARD", "SDM-OGL IB", "OGL-SDM IB", "OGL YARD", "OGL-KRV IB", "KRV-OGL IB", "KRV YARD", "KRV-ANB"],
+                "JE/T/CLX": ["ANB YARD", "ANB-UGD IB", "UGD-ANB IB", "UGD YARD", "UGD-CJM", "CJM YARD", "CJM-VTM DN IB", "VTM-CJM UP IB", "VTM YARD", "VTM-CLX IB", "CLX-VTM IB", "CLX YARD"]
+            },
+            "SSE/T/TEL": {
+                "JE/T/BPP": ["CLX-SPF", "SPF-BPP", "BPP-APL", "APL-NDO", "NDO-TSR"],
+                "JE/T/TEL": ["TSR-TEL", "TEL-DIG", "DIG-PVD", "PVD-KCC"]
+            },
+            "SSE/T/M/BZA": {
+                "SSE/T/KI": ["KI R/R-HUT 1", "KI R/R-HUT 2", "KI HUT 2 - KI HUT 3", "KI-RYP", "RYP R/R - HUT 1", "RYP R/R - HUT 2", "RYP HUT 2 - HUT 3", "KI-RYP WS", "RYP WS-RYP", "RYP-NWBH", "NWBH-CR.Cabin", "NWBH-D Cabin", "NWBH-Bulb Cabin", "CR Cabin - D Cabin", "CR Cabin - Bulb Cabin", "D Cabin - D Goomty", "BULB Cabin - VNEC", "D Goomty - F Cabin", "F Cabin - F Goomty", "BZA-KCC"],
+                "JE/T/M/BZA": ["BZA-VNEC", "VNEC-MDUN", "MDUN-RMV", "RMV-NDM", "BZA-GALA", "VNEC-Goomy 1", "Goomty 1 - Goomty 2", "Goomty 2 - GALA", "GALA - MBD", "GALA - Goomty 3", "Goomty 3 - Goomty 4", "Goomty 4 - Goomty 5", "Goomty 5 - MBD", "MBD - New Goomty (Near LC 319)", "MBD - GWM", "MBD - Goomty 6", "Goomty 6 - Goomty 7", "Goomty 7 - Goomty 8", "Goomty 8 - Goomty 9", "Goomty 9- GWM", "GWM - PAVP", "PAVP - ABS Hut near LC 327", "ABS Hut near LC 327 - TOU", "TOU - NZD", "TOU - ABS Hut near LC 332", "ABS Hut near LC 332 - NZD"]
+            },
+            "SSE/T/EE": {
+                "SSE/T/NDD": ["CU-KVR", "CU-NDD", "NDD-NBM", "TDD-NBM"],
+                "JE/T/TDD": ["TDD-ABS HUT", "ABS HUT-BPY", "BPY-ABS HUT at LC 367", "ABS HUT at LC 367-ABS HUT UNGT", "ABS HUT UNGT-CEL", "CEL-ABS HUT KKRM", "ABS HUT KKRM-PUA", "PUA-ABS HUT LC 362", "ABS HUT LC 362-BMD"],
+                "JE/T/EE": ["BMD-DEL", "DEL-EE", "EE-VAT", "VAT-NZD"]
+            },
+            "SSE/T/RJY": {
+                "JE/T/RJY": ["KVR-RJY", "KVR-GVN", "GVN-RJY", "RJY-KYM", "KYM-DWP", "DWP-APT"]
+            },
+            "SSE/T/SLO": {
+                "JE/T/SLO": ["APT - BVL", "BVL - MPU", "MPU - SLO", "SLO - PAP"],
+                "JE/T/SW/COA": ["SLO - SPVM", "SPVM - CCT", "CCT-NCOA", "NCOA-COA"]
+            },
+            "SSE/T/TUNI": {
+                "JE/T/TUNI": ["PAP - GLP", "GLP - RVD", "RVD - ANV", "ANV - HVM", "HVM - TUNI"],
+                "JE/T/YLM": ["TUNI - GLU", "GLU - NRP", "NRP - REG", "REG - YLM", "YLM STATION EI"],
+                "SSE/T/AKP": ["YLM - NASP", "NASP - BVM", "BVM - AKP", "AKP -THY", "THY - DVD"]
+            },
+            "SSE/T/GDV": {
+                "SSE/T/GDV II": ["NDM-UPL", "UPL-IDP", "IDP-GDV", "GDV-OTR", "OTR--MDVL", "MDVL-KKLR", "KKLR-PLVA (halt)"],
+                "SSE/TGDV": ["GDV Yard", "GDV-GVL", "GVL-KVM", "KVM-PAV", "PAV-CLU", "CLU-MTM", "MTM Yard"]
+            },
+            "SSE/T/BVRM": {
+                "SSE/T/BVRM": ["KKLR-AKVD", "AKVD-UNDI", "UNDI-BVRM", "BVRM-PAGM", "PAGM-VVM", "VVM-PKO", "PKO-NS", "NS YARD"],
+                "JE/T/TNKU": ["BVRM-AVLI", "AVLI-AL", "AL-TNKU", "TNKU-KLDI", "KLDI-NDD", "BVRM YARD"]
+            }
+        };
+
+        const eqTypes = [
+            { name: "EI", id: "EI" },
+            { name: "MSDAC", id: "MSDAC" },
+            { name: "IB", id: "IB" },
+            { name: "STM-1 with RCIL", id: "STM-1" }
+        ];
+        
+        // --- SECURE AUTHORIZATION ---
+        function requireAuth() {
+            if (sessionStorage.getItem('isAuthenticated') === 'true') return true;
+            
+            const pwd = prompt("🔒 PROTECTED AREA\nPlease enter the password to modify data:");
+            if (pwd === "Test@123") {
+                sessionStorage.setItem('isAuthenticated', 'true');
+                return true;
+            }
+            if (pwd !== null) alert("❌ Incorrect Password. Access Denied.");
+            return false;
+        }
+
+        // --- CLOUD SYNC LOGIC ---
+        let db = {};
+        let ghConfig = JSON.parse(localStorage.getItem('gh_config')) || { owner: '', repo: '', token: '' };
+        let currentGhSha = null;
+
+        window.onload = async function() {
+            buildEquipmentUI();
+            
+            if (ghConfig.token && ghConfig.owner && ghConfig.repo) {
+                updateSyncStatus("🔄 Connecting to Cloud...", "bg-yellow-500");
+                const cloudSuccess = await loadFromGitHub();
+                if (cloudSuccess) {
+                    updateSyncStatus("🟢 Cloud Sync Active", "bg-green-500");
+                } else {
+                    updateSyncStatus("🔴 Cloud Error (Using Local)", "bg-red-500");
+                    loadLocalDB();
+                }
+            } else {
+                updateSyncStatus("⚪ Offline Mode", "bg-gray-600");
+                loadLocalDB();
+            }
+
+            populateInitialDropdowns();
+            generateAllDataReport();
+            generateReport();
+        }
+
+        function loadLocalDB() {
+            db = JSON.parse(localStorage.getItem('ofcDb_v12')) || JSON.parse(localStorage.getItem('ofcDb_v11')) || JSON.parse(localStorage.getItem('ofcDb_v10'));
+            if (!db) {
+                db = {};
+            }
+            
+            // Re-apply master hierarchy to ensure any new sections are added
+            for (let inc in sectionHierarchy) {
+                if(!db[inc]) db[inc] = {};
+                for (let sec in sectionHierarchy[inc]) {
+                    if(!db[inc][sec]) db[inc][sec] = {};
+                    sectionHierarchy[inc][sec].forEach(block => {
+                        if(!db[inc][sec][block]) db[inc][sec][block] = {};
+                        eqTypes.forEach(eq => {
+                            if(!db[inc][sec][block][eq.id]) {
+                                db[inc][sec][block][eq.id] = { isApplicable: false, workingDate: "", spareDate: "", remarks: "" };
+                            }
+                        });
+                    });
+                }
+            }
+            localStorage.setItem('ofcDb_v12', JSON.stringify(db));
+        }
+
+        // GitHub API Integration
+        async function loadFromGitHub() {
+            try {
+                const res = await fetch(`https://api.github.com/repos/${ghConfig.owner}/${ghConfig.repo}/contents/data.json`, {
+                    headers: { 'Authorization': `token ${ghConfig.token}` }
+                });
+                if (res.ok) {
+                    const data = await res.json();
+                    currentGhSha = data.sha;
+                    const jsonStr = decodeURIComponent(escape(window.atob(data.content)));
+                    const cloudDb = JSON.parse(jsonStr);
+                    if(Object.keys(cloudDb).length > 0) {
+                        db = cloudDb;
+                        
+                        // Merge missing hierarchy into cloud data if schema changed
+                        for (let inc in sectionHierarchy) {
+                            if(!db[inc]) db[inc] = {};
+                            for (let sec in sectionHierarchy[inc]) {
+                                if(!db[inc][sec]) db[inc][sec] = {};
+                                sectionHierarchy[inc][sec].forEach(block => {
+                                    if(!db[inc][sec][block]) db[inc][sec][block] = {};
+                                    eqTypes.forEach(eq => {
+                                        if(!db[inc][sec][block][eq.id]) {
+                                            db[inc][sec][block][eq.id] = { isApplicable: false, workingDate: "", spareDate: "", remarks: "" };
+                                        }
+                                    });
+                                });
+                            }
+                        }
+                        
+                        localStorage.setItem('ofcDb_v12', JSON.stringify(db)); // backup locally
+                        return true;
+                    }
+                }
+                return false;
+            } catch (e) { console.error("GitHub Load Error:", e); return false; }
+        }
+
+        async function saveToGitHub() {
+            if (!ghConfig.token) return true; // If offline, pretend it succeeded
+            try {
+                const jsonStr = JSON.stringify(db, null, 2);
+                const content = window.btoa(unescape(encodeURIComponent(jsonStr)));
+                
+                const res = await fetch(`https://api.github.com/repos/${ghConfig.owner}/${ghConfig.repo}/contents/data.json`, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${ghConfig.token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: `Update OFC Data via App: ${new Date().toLocaleString()}`,
+                        content: content,
+                        sha: currentGhSha
+                    })
+                });
+                
+                if (res.ok) {
+                    const data = await res.json();
+                    currentGhSha = data.content.sha;
+                    return true;
+                } else {
+                    return false;
+                }
+            } catch (e) { console.error("GitHub Save Error:", e); return false; }
+        }
+
+        // --- GITHUB MODAL CONTROLS ---
+        function openGhModal() {
+            document.getElementById('ghOwner').value = ghConfig.owner;
+            document.getElementById('ghRepo').value = ghConfig.repo;
+            document.getElementById('ghToken').value = ghConfig.token;
+            document.getElementById('ghModal').classList.remove('hidden');
+        }
+        function closeGhModal() { document.getElementById('ghModal').classList.add('hidden'); }
+        
+        async function saveGhSettings() {
+            ghConfig.owner = document.getElementById('ghOwner').value.trim();
+            ghConfig.repo = document.getElementById('ghRepo').value.trim();
+            ghConfig.token = document.getElementById('ghToken').value.trim();
+            localStorage.setItem('gh_config', JSON.stringify(ghConfig));
+            closeGhModal();
+            window.location.reload();
+        }
+
+        function updateSyncStatus(text, bgClass) {
+            const el = document.getElementById('syncStatus');
+            el.innerHTML = text;
+            el.className = `${bgClass} text-white text-xs px-2 py-1 rounded-full flex items-center gap-1 font-bold shadow`;
+        }
+
+        // --- UI & LOGIC ---
+        function populateInitialDropdowns() {
+            const inchargeSelect = document.getElementById("inchargeSelect");
+            const reportSseSelect = document.getElementById("reportSseSelect");
+            inchargeSelect.innerHTML = '<option value="">-- Select Incharge --</option>';
+            reportSseSelect.innerHTML = '<option value="ALL">All Sections</option>';
+
+            const uniqueIncharges = Object.keys(db).sort();
+            uniqueIncharges.forEach(inc => {
+                inchargeSelect.add(new Option(inc, inc));
+                reportSseSelect.add(new Option(inc, inc));
+            });
+        }
+
+        function switchTab(tab) {
+            if (tab === 'entry' && !requireAuth()) {
+                return;
+            }
+
+            ['entry', 'report', 'alldata'].forEach(t => {
+                document.getElementById(`tab-${t}`).style.display = t === tab ? 'block' : 'none';
+                const btn = document.getElementById(`btn-tab-${t}`);
+                
+                if(t === tab) {
+                    btn.className = "bg-blue-500 px-3 py-2 rounded font-semibold transition text-white text-sm shadow";
+                } else {
+                    const extraClass = t === 'entry' ? " flex items-center gap-1" : "";
+                    const lockIcon = t === 'entry' && sessionStorage.getItem('isAuthenticated') !== 'true' ? "🔒 " : (t === 'entry' ? "🔓 " : "");
+                    btn.className = "bg-blue-900 hover:bg-blue-700 px-3 py-2 rounded font-semibold transition text-gray-300 text-sm shadow" + extraClass;
+                    
+                    if (t === 'entry') {
+                        btn.innerHTML = lockIcon + "Data Entry";
+                    }
+                }
+            });
+            
+            if (tab === 'entry') {
+                document.getElementById('btn-tab-entry').innerHTML = "🔓 Data Entry";
+            }
+
+            if (tab === 'report') { generateReport(); }
+            if (tab === 'alldata') { generateAllDataReport(); }
+        }
+
+        function populateSectionalSelect() {
+            const inc = document.getElementById("inchargeSelect").value;
+            const secSelect = document.getElementById("sectionalSelect");
+            const blockSelect = document.getElementById("blockSelect");
+            const addBtn = document.getElementById("addBlockBtn");
+            
+            secSelect.innerHTML = '<option value="">-- Select Sectional --</option>';
+            blockSelect.innerHTML = '<option value="">-- Select Block --</option>';
+            document.getElementById("dataForm").classList.add("hidden");
+            
+            blockSelect.disabled = true; blockSelect.classList.add("bg-gray-100", "cursor-not-allowed"); blockSelect.classList.remove("bg-white");
+            addBtn.disabled = true; addBtn.classList.add("bg-gray-200", "text-gray-500", "cursor-not-allowed");
+            secSelect.disabled = !inc;
+
+            if (inc) {
+                secSelect.classList.remove("bg-gray-100", "cursor-not-allowed"); secSelect.classList.add("bg-white");
+                Object.keys(db[inc] || {}).sort().forEach(sec => secSelect.add(new Option(sec, sec)));
+            } else {
+                secSelect.classList.add("bg-gray-100", "cursor-not-allowed"); secSelect.classList.remove("bg-white");
+            }
+        }
+
+        function populateBlockSections() {
+            const inc = document.getElementById("inchargeSelect").value;
+            const sec = document.getElementById("sectionalSelect").value;
+            const blockSelect = document.getElementById("blockSelect");
+            const addBtn = document.getElementById("addBlockBtn");
+            
+            blockSelect.innerHTML = '<option value="">-- Select Block --</option>';
+            document.getElementById("dataForm").classList.add("hidden");
+            
+            const enable = inc && sec;
+            blockSelect.disabled = !enable;
+            addBtn.disabled = !enable;
+
+            if (enable) {
+                blockSelect.classList.remove("bg-gray-100", "cursor-not-allowed"); blockSelect.classList.add("bg-white");
+                addBtn.classList.remove("bg-gray-200", "text-gray-500", "cursor-not-allowed"); addBtn.classList.add("bg-green-600", "text-white");
+                Object.keys(db[inc][sec] || {}).forEach(block => blockSelect.add(new Option(block, block)));
+            } else {
+                blockSelect.classList.add("bg-gray-100", "cursor-not-allowed"); blockSelect.classList.remove("bg-white");
+                addBtn.classList.add("bg-gray-200", "text-gray-500", "cursor-not-allowed"); addBtn.classList.remove("bg-green-600", "text-white");
+            }
+        }
+
+        function addNewBlock() {
+            const inc = document.getElementById("inchargeSelect").value;
+            const sec = document.getElementById("sectionalSelect").value;
+            if (!inc || !sec) return;
+            
+            const newBlock = prompt(`Enter new Block Section name for:\n${sec}`);
+            if (newBlock && newBlock.trim() !== "") {
+                const blockName = newBlock.trim();
+                if(!db[inc][sec][blockName]) {
+                    db[inc][sec][blockName] = {};
+                    eqTypes.forEach(eq => db[inc][sec][blockName][eq.id] = { isApplicable: false, workingDate: "", spareDate: "", remarks: "" });
+                    saveData(); // Save entirely
+                }
+                populateBlockSections();
+                document.getElementById("blockSelect").value = blockName;
+                loadDataForSection();
+            }
+        }
+
+        function loadDataForSection() {
+            const inc = document.getElementById("inchargeSelect").value;
+            const sec = document.getElementById("sectionalSelect").value;
+            const block = document.getElementById("blockSelect").value;
+            
+            if (!inc || !sec || !block) return document.getElementById("dataForm").classList.add("hidden");
+
+            document.getElementById("dataForm").classList.remove("hidden");
+            document.getElementById("equipmentHeader").innerText = `Equipment Data: ${block}`;
+            
+            const record = db[inc][sec][block];
+
+            eqTypes.forEach(eq => {
+                document.getElementById(`${eq.id}-applicable`).checked = record[eq.id].isApplicable;
+                document.getElementById(`${eq.id}-work`).value = record[eq.id].workingDate;
+                document.getElementById(`${eq.id}-spare`).value = record[eq.id].spareDate;
+                document.getElementById(`${eq.id}-rem`).value = record[eq.id].remarks;
+                toggleEquipmentUI(eq.id); 
+                checkOverdueUI(`${eq.id}-work`, record[eq.id].workingDate, 'work');
+                checkOverdueUI(`${eq.id}-spare`, record[eq.id].spareDate, 'spare');
+            });
+        }
+
+        function toggleEquipmentUI(eqId) {
+            const isApplicable = document.getElementById(`${eqId}-applicable`).checked;
+            const container = document.getElementById(`${eqId}-fields`);
+            const inputs = container.querySelectorAll('input');
+            
+            if (isApplicable) {
+                container.classList.remove('equipment-disabled');
+                inputs.forEach(input => input.disabled = false);
+            } else {
+                container.classList.add('equipment-disabled');
+                inputs.forEach(input => input.disabled = true);
+                checkOverdueUI(`${eqId}-work`, "", 'work');
+                checkOverdueUI(`${eqId}-spare`, "", 'spare');
+            }
+        }
+
+        async function saveData() {
+            const inc = document.getElementById("inchargeSelect").value;
+            const sec = document.getElementById("sectionalSelect").value;
+            const block = document.getElementById("blockSelect").value;
+            if (!inc || !sec || !block) return;
+
+            const btn = document.getElementById('saveBtn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = "⏳ Saving...";
+            btn.classList.add("opacity-75");
+
+            eqTypes.forEach(eq => {
+                const isApp = document.getElementById(`${eq.id}-applicable`).checked;
+                db[inc][sec][block][eq.id] = {
+                    isApplicable: isApp,
+                    workingDate: isApp ? document.getElementById(`${eq.id}-work`).value : "",
+                    spareDate: isApp ? document.getElementById(`${eq.id}-spare`).value : "",
+                    remarks: isApp ? document.getElementById(`${eq.id}-rem`).value : ""
+                };
+            });
+
+            localStorage.setItem('ofcDb_v12', JSON.stringify(db));
+
+            const cloudSaved = await saveToGitHub();
+
+            if(cloudSaved) {
+                btn.innerHTML = "✅ Saved to Cloud!";
+                btn.classList.replace("bg-blue-600", "bg-green-600");
+                if(ghConfig.token) updateSyncStatus("🟢 Cloud Sync Active", "bg-green-500");
+            } else {
+                btn.innerHTML = "⚠️ Saved Locally Only";
+                btn.classList.replace("bg-blue-600", "bg-yellow-600");
+                if(ghConfig.token) updateSyncStatus("🔴 Cloud Error (Local Only)", "bg-red-500");
+            }
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.className = "bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded font-bold transition shadow-lg w-full sm:w-auto no-print flex justify-center items-center gap-2";
+            }, 2500);
+            
+            loadDataForSection(); 
+        }
+
+        function getOverdueDays(dateStr) {
+            if (!dateStr) return 0;
+            const testDate = new Date(dateString = dateStr);
+            const today = new Date();
+            today.setHours(0,0,0,0); testDate.setHours(0,0,0,0);
+            return Math.floor((today - testDate) / (1000 * 60 * 60 * 24));
+        }
+
+        function checkOverdueUI(inputId, dateString, fiberType) {
+            const eqId = inputId.split('-')[0];
+            const isApplicable = document.getElementById(`${eqId}-applicable`).checked;
+            const inputEl = document.getElementById(inputId);
+            let spanEl = document.getElementById(`span-${inputId}`);
+            
+            if (!spanEl) {
+                spanEl = document.createElement('span');
+                spanEl.id = `span-${inputId}`;
+                spanEl.className = 'overdue-text hidden font-bold';
+                inputEl.parentNode.appendChild(spanEl);
+            }
+
+            const days = getOverdueDays(dateString);
+            let limit = (eqId === 'STM-1') ? 90 : (fiberType === 'work' ? 180 : 90);
+            
+            if (isApplicable && days > limit) {
+                inputEl.classList.add('overdue-input');
+                spanEl.classList.remove('hidden');
+                spanEl.innerHTML = `⚠️ Overdue by ${days - limit} days`;
+            } else {
+                inputEl.classList.remove('overdue-input');
+                spanEl.classList.add('hidden');
+            }
+        }
+
+        function buildEquipmentUI() {
+            const container = document.getElementById("equipmentGrids");
+            container.innerHTML = "";
+            eqTypes.forEach(eq => {
+                const limitStr = eq.id === "STM-1" ? "(90 Days limit)" : "(180 Days limit)";
+                const card = `
+                <div class="border rounded-xl p-5 bg-slate-50 shadow-sm">
+                    <div class="flex items-center justify-between mb-4 border-b pb-2">
+                        <div class="bg-blue-800 text-white px-2 py-1 rounded text-sm font-bold">${eq.name}</div>
+                        <label class="flex items-center space-x-2 cursor-pointer bg-white px-3 py-1 rounded-full border shadow-sm no-print">
+                            <input type="checkbox" id="${eq.id}-applicable" onchange="toggleEquipmentUI('${eq.id}')" class="w-5 h-5 text-blue-600 rounded cursor-pointer">
+                            <span class="text-sm font-bold text-gray-700">Applicable</span>
+                        </label>
+                    </div>
+                    <div id="${eq.id}-fields" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 mb-1">Working Date <span class="text-blue-500 no-print">${limitStr}</span></label>
+                            <input type="date" id="${eq.id}-work" onchange="checkOverdueUI('${eq.id}-work', this.value, 'work')" class="w-full border-gray-300 border rounded p-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 mb-1">Spare Date <span class="text-blue-500 no-print">(90 Days limit)</span></label>
+                            <input type="date" id="${eq.id}-spare" onchange="checkOverdueUI('${eq.id}-spare', this.value, 'spare')" class="w-full border-gray-300 border rounded p-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-600 mb-1">Remarks</label>
+                            <input type="text" id="${eq.id}-rem" placeholder="Enter remarks..." class="w-full border-gray-300 border rounded p-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+                </div>`;
+                container.innerHTML += card;
+            });
+        }
+
+        // --- OVERDUE REPORT ---
+        function generateReport() {
+            const incFilter = document.getElementById("reportSseSelect").value;
+            const eqFilter = document.getElementById("reportEqSelect").value;
+            const sortDir = document.getElementById("reportSortSelect").value;
+            const tbody = document.getElementById("reportTableBody");
+            const noMsg = document.getElementById("noOverdueMsg");
+            tbody.innerHTML = "";
+            let rows = [];
+
+            for (let inc in db) {
+                if (incFilter !== "ALL" && inc !== incFilter) continue;
+                for (let sec in db[inc]) {
+                    for (let block in db[inc][sec]) {
+                        eqTypes.forEach(eq => {
+                            if (eqFilter !== "ALL" && eq.id !== eqFilter) return;
+                            const rec = db[inc][sec][block][eq.id];
+                            if (!rec || !rec.isApplicable) return;
+                            
+                            const check = (dateStr, lbl, typeKey) => {
+                                if (!dateStr) return; 
+                                let limit = (eq.id === 'STM-1') ? 90 : (typeKey === 'work' ? 180 : 90);
+                                const days = getOverdueDays(dateStr);
+                                if (days > limit) {
+                                    rows.push({ inc, sec, block, eqName: eq.name, lbl, dateStr, daysOverdue: days - limit });
+                                }
+                            };
+                            check(rec.workingDate, "Working", 'work');
+                            check(rec.spareDate, "Spare", 'spare');
+                        });
+                    }
+                }
+            }
+
+            if (rows.length > 0) {
+                noMsg.classList.add("hidden"); tbody.parentElement.classList.remove("hidden");
+                rows.sort((a, b) => sortDir === 'desc' ? b.daysOverdue - a.daysOverdue : a.daysOverdue - b.daysOverdue);
+                rows.forEach(r => {
+                    const tr = document.createElement("tr"); tr.className = "hover:bg-red-50 border-b";
+                    tr.innerHTML = `<td class="py-2 px-3">${r.inc}</td><td class="py-2 px-3 font-bold">${r.sec}</td><td class="py-2 px-3 font-bold">${r.block}</td><td class="py-2 px-3"><span class="bg-blue-100 px-2 py-1 rounded text-xs font-bold text-blue-800">${r.eqName}</span></td><td class="py-2 px-3">${r.lbl}</td><td class="py-2 px-3">${r.dateStr}</td><td class="py-2 px-3 text-red-600 font-bold bg-red-50">⚠️ ${r.daysOverdue} Days</td>`;
+                    tbody.appendChild(tr);
+                });
+            } else {
+                noMsg.classList.remove("hidden"); tbody.parentElement.classList.add("hidden");
+            }
+        }
+
+        // --- VIEW ALL DATA REPORT ---
+        function generateAllDataReport() {
+            const tbody = document.getElementById("allDataTableBody");
+            tbody.innerHTML = "";
+            for (let inc in db) {
+                for (let sec in db[inc]) {
+                    for (let block in db[inc][sec]) {
+                        eqTypes.forEach(eq => {
+                            const rec = db[inc][sec][block][eq.id];
+                            if (!rec || !rec.isApplicable) return;
+                            
+                            const workLimit = (eq.id === 'STM-1') ? 90 : 180;
+                            const isWOver = rec.workingDate && getOverdueDays(rec.workingDate) > workLimit;
+                            const isSOver = rec.spareDate && getOverdueDays(rec.spareDate) > 90;
+
+                            const wHtml = isWOver ? `<span class="text-red-600 font-bold bg-red-50 px-1 rounded">${rec.workingDate} ⚠️</span>` : rec.workingDate;
+                            const sHtml = isSOver ? `<span class="text-red-600 font-bold bg-red-50 px-1 rounded">${rec.spareDate} ⚠️</span>` : rec.spareDate;
+
+                            const tr = document.createElement("tr"); tr.className = "hover:bg-blue-50 border-b search-row";
+                            tr.innerHTML = `<td class="py-2 px-3">${inc}</td><td class="py-2 px-3 font-bold">${sec}</td><td class="py-2 px-3 font-bold block-name">${block}</td><td class="py-2 px-3"><span class="bg-blue-100 px-2 py-1 rounded text-xs font-bold text-blue-800">${eq.name}</span></td><td class="py-2 px-3">${wHtml||'-'}</td><td class="py-2 px-3">${sHtml||'-'}</td><td class="py-2 px-3 text-gray-500 italic text-xs max-w-[200px] truncate" title="${rec.remarks}">${rec.remarks||'-'}</td>`;
+                            tbody.appendChild(tr);
+                        });
+                    }
+                }
+            }
+        }
+
+        function filterMasterTable() {
+            const input = document.getElementById("masterSearch").value.toUpperCase();
+            document.querySelectorAll(".search-row").forEach(row => {
+                row.style.display = row.innerText.toUpperCase().includes(input) ? "" : "none";
+            });
+        }
+
+        function parseCSVLine(text) {
+            let result = [], current = '', inQuotes = false;
+            for (let i = 0; i < text.length; i++) {
+                let char = text[i];
+                if (char === '"') inQuotes = !inQuotes;
+                else if (char === ',' && !inQuotes) { result.push(current.trim()); current = ''; }
+                else current += char;
+            }
+            result.push(current.trim()); return result;
+        }
+
+        function formatToInputDate(dateStr) {
+            if (!dateStr) return "";
+            if (dateStr.match(/^\d{4}-\d{2}-\d{2}$/)) return dateStr;
+            const match = dateStr.match(/\d{1,2}[\.\/\-]\d{1,2}[\.\/\-]\d{2,4}/);
+            if (!match) return "";
+            let parts = match[0].split(/[\.\/\-]/);
+            if (parts.length === 3) {
+                let year = parts[2].length === 2 ? "20" + parts[2] : parts[2];
+                return `${year}-${parts[1].padStart(2, '0')}-${parts[0].padStart(2, '0')}`;
+            }
+            return "";
+        }
+
+        async function handleFileUpload(event) {
+            if (!requireAuth()) {
+                event.target.value = ''; 
+                return;
+            }
+
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = async function(e) {
+                const lines = e.target.result.split('\n');
+                let currentInc = "", currentSec = "", updatedCount = 0;
+
+                for (let i = 2; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    if (!line) continue;
+                    
+                    const cols = parseCSVLine(line);
+                    if (cols[0] && cols[0].startsWith("SSE/T")) { currentInc = cols[0]; if(!db[currentInc]) db[currentInc] = {}; }
+                    if (cols[1] && (cols[1].startsWith("JE/") || cols[1].startsWith("SSE/"))) { currentSec = cols[1]; if(currentInc && !db[currentInc][currentSec]) db[currentInc][currentSec] = {}; }
+                    
+                    const blockSection = cols[3];
+                    if (currentInc && currentSec && blockSection) {
+                        if (!db[currentInc][currentSec][blockSection]) {
+                            db[currentInc][currentSec][blockSection] = {};
+                            eqTypes.forEach(eq => db[currentInc][currentSec][blockSection][eq.id] = { isApplicable: false, workingDate: "", spareDate: "", remarks: "" });
+                        }
+                        const eqMap = { "EI": { w: 4, s: 5, r: 6 }, "MSDAC": { w: 7, s: 8, r: 9 }, "IB": { w: 10, s: 11, r: 12 }, "STM-1": { w: 13, s: 14, r: 15 } };
+                        eqTypes.forEach(eq => {
+                            const mapping = eqMap[eq.id];
+                            if (cols.length > mapping.w) {
+                                const wDate = formatToInputDate(cols[mapping.w]);
+                                const sDate = formatToInputDate(cols[mapping.s]);
+                                const rem = cols[mapping.r] || "";
+                                const isApp = !!(wDate || sDate || rem);
+                                db[currentInc][currentSec][blockSection][eq.id] = { isApplicable: isApp, workingDate: wDate, spareDate: sDate, remarks: rem };
+                            }
+                        });
+                        updatedCount++;
+                    }
+                }
+                
+                localStorage.setItem('ofcDb_v12', JSON.stringify(db));
+                
+                if(ghConfig.token) {
+                    updateSyncStatus("🔄 Syncing Import...", "bg-yellow-500");
+                    await saveToGitHub();
+                    updateSyncStatus("🟢 Cloud Sync Active", "bg-green-500");
+                }
+                
+                alert(`CSV Imported successfully! Extracted data for ${updatedCount} valid records.`);
+                window.location.reload(); 
+            };
+            reader.readAsText(file);
+        }
+
+        function exportData(onlyOverdue) {
+            let csvContent = "OFC Testing Dates and overdue Report(MSDAC/EI/IBS/STM),,,,,,,,,,,,,,,\n";
+            csvContent += "INCHARGE SSE / Section,SECTIONAL SSE/JE,Sl No of sec.SSE/Tele wise,Block Section/IB/ABS HUTs,EI,,,MSDAC,,,IB,,,STM-1 with RCIL,,\n";
+            csvContent += ",,,, working fiber Testing Date, spare fiber Testing Date,Remarks, working fiber Testing Date, spare fiber Testing Date,Remarks, working fiber Testing Date, spare fiber Testing Date,Remarks, working fiber Testing Date, spare fiber Testing Date,Remarks \n";
+
+            for (let inc in db) {
+                let firstRowForInc = true;
+                for (let sec in db[inc]) {
+                    let slNo = 1, firstRowForSec = true;
+                    for (let block in db[inc][sec]) {
+                        
+                        let isRowOverdue = false;
+                        if (onlyOverdue) {
+                            eqTypes.forEach(eq => {
+                                const rec = db[inc][sec][block][eq.id];
+                                if (rec && rec.isApplicable) {
+                                    if (getOverdueDays(rec.workingDate) > (eq.id === 'STM-1' ? 90 : 180)) isRowOverdue = true;
+                                    if (getOverdueDays(rec.spareDate) > 90) isRowOverdue = true;
+                                }
+                            });
+                        }
+                        if (onlyOverdue && !isRowOverdue) continue;
+
+                        let row = [firstRowForInc ? inc : "", firstRowForSec ? sec : "", slNo++, `"${block}"`];
+                        eqTypes.forEach(eq => {
+                            let rec = db[inc][sec][block][eq.id] || { isApplicable: false, workingDate: "", spareDate: "", remarks: "" };
+                            if (rec.isApplicable) {
+                                row.push(rec.workingDate); row.push(rec.spareDate); row.push(rec.remarks ? `"${rec.remarks.replace(/"/g, '""')}"` : "");
+                            } else {
+                                row.push(""); row.push(""); row.push("");
+                            }
+                        });
+                        csvContent += row.join(",") + "\n";
+                        firstRowForInc = false; firstRowForSec = false;
+                    }
+                }
+            }
+
+            const fileName = onlyOverdue ? "BZA_DIV_OFC_OVERDUE_REPORT.csv" : "BZA_DIV_OFC_FULL_DATA.csv";
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement("a");
+            const url = URL.createObjectURL(blob);
+            link.setAttribute("href", url); link.setAttribute("download", fileName);
+            link.style.visibility = 'hidden'; document.body.appendChild(link);
+            link.click(); document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
